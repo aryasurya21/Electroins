@@ -25,30 +25,32 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         coinManager.delegate = self
     }
 
-    func didUpdateCoinData(_ coinData: CoinModel) {
-        <#code#>
-    }
-    
-    func didFailWithError(_ error: Error) {
-        <#code#>
-    }
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
-     }
+    }
      
-     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return coinManager.currencyArray.count
-     }
+    }
      
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return coinManager.currencyArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
-        
-        coinManager.fetchBitCoinData(TargetCurrency: coinManager.currencyArray[row])
+        let targetCurrency = coinManager.currencyArray[row]
+        coinManager.fetchBitCoinData(TargetCurrency: targetCurrency)
+    }
+    
+    func didUpdateCoinData(_ coinData: CoinModel) {
+        DispatchQueue.main.async {
+            self.currencyLabel.text = coinData.asset_id_quote
+            self.bitcoinLabel.text = String(format:"%.2f", coinData.rate)
+        }
+    }
+     
+    func didFailWithError(_ error: Error) {
+         print(error)
     }
 }
 

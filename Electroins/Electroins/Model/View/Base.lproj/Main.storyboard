@@ -40,7 +40,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-5p-hok" userLabel="Bitcoin Label">
                                                         <rect key="frame" x="120" y="160.5" width="110" height="27.5"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="110" id="3Y0-gr-T1t"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="3Y0-gr-T1t"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
