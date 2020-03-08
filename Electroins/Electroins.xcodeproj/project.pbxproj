@@ -56,15 +56,40 @@
 		A19B062E24111D0500F626F3 /* Electroins */ = {
 			isa = PBXGroup;
 			children = (
+				A19B064324120D2000F626F3 /* Model */,
+				A19B064424120D3800F626F3 /* View */,
+				A19B064524120D4200F626F3 /* Controller */,
 				A19B062F24111D0500F626F3 /* AppDelegate.swift */,
 				A19B063124111D0500F626F3 /* SceneDelegate.swift */,
-				A19B063324111D0500F626F3 /* ViewController.swift */,
-				A19B063524111D0500F626F3 /* Main.storyboard */,
 				A19B063824111D0500F626F3 /* Assets.xcassets */,
 				A19B063A24111D0500F626F3 /* LaunchScreen.storyboard */,
 				A19B063D24111D0500F626F3 /* Info.plist */,
 			);
 			path = Electroins;
+			sourceTree = "<group>";
+		};
+		A19B064324120D2000F626F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A19B064424120D3800F626F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A19B063524111D0500F626F3 /* Main.storyboard */,
+			);
+			name = View;
+			path = Model/View;
+			sourceTree = "<group>";
+		};
+		A19B064524120D4200F626F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A19B063324111D0500F626F3 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
